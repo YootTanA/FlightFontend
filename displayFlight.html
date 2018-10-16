@@ -1,0 +1,93 @@
+<script type="text/javascript">
+  // call back hell ในตำนาน
+  $(document).ready(function () {
+    $("#enties").change(function () {
+      $("#matrixView").load("main/grid.html", function (responseTxt, statusTxt, xhr) {
+        if (statusTxt == "success")
+
+          // alert($("#enties").val());
+          search($("#enties").val());
+        if (statusTxt == "error")
+          alert("Status: " + xhr.status + " Text: " + xhr.statusText);
+      });
+    });
+  });
+
+</script>
+
+
+<div class="card">
+  <div id="header_font" class="card-header" style="font-family: 'Roboto Slab', serif;background-color:#3A727F">
+    <div class="row">
+      <h1 style="color:white;font-size:25px">[ Result ]</h1>
+    </div>
+  </div>
+  <div class="card-body">
+
+    <div class="col-sm-3">
+      <label for="adult">Select showed enties</label>
+      <select class="form-control" id="enties">
+        <option>1</option>
+        <option>2</option>
+        <option selected>3</option>
+        <option>4</option>
+      </select>
+    </div>
+
+    <br>
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link " style="color:#034B5D" data-toggle="tab" href="#listView">List view</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" style="color:#034B5D" data-toggle="tab" href="#matrixView">Matrix view</a>
+      </li>
+
+    </ul>
+
+    <div class="tab-content">
+      <div id="matrixView" class="container tab-pane active">
+
+
+
+        ///default //
+        <script type="text/javascript">
+
+          $(document).ready(function () {
+
+            $("#matrixView").load("main/grid.html", function (responseTxt, statusTxt, xhr) {
+              if (statusTxt == "success")
+
+                search(3);
+              if (statusTxt == "error")
+                alert("Status: " + xhr.status + " Text: " + xhr.statusText);
+            });
+
+          });
+
+        </script>
+
+
+      </div>
+      <div id="listView" class="container tab-pane ">
+
+      </div>
+    </div>
+  </div>
+  <div class="card-footer">
+
+    <div class="row">
+      <div class="col-sm-4"> <label id="label1"></label> <label id="label2" style="color:#E96060"></label> <label id="label3">pages.</label></div>
+      <div class="col-sm-4">
+        <nav aria-label="Page navigation example">
+          <ul class="pagination" id="page">
+          </ul>
+        </nav>
+
+      </div>
+      <div class="col-sm-4"></div>
+    </div>
+
+  </div>
+
+</div>

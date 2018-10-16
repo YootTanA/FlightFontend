@@ -1,0 +1,16 @@
+{
+  "name": "flight",
+  "version": "1.0.0",
+  "description": " Mgn for flight ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Oat",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser" : "*",
+    "express": "^4.16.3",
+    "path": "^0.12.7"
+  }
+}

@@ -1,0 +1,24 @@
+body {
+  font-family: 'Muli', serif;
+  font-size: 15px;
+}
+.normal_font{
+  color:#28527A;
+  font-size:30px;
+}
+#gray_font{
+  background-color: #424242;
+  color: white;
+  font-size:20px;
+}
+#background{
+  background-image: url('public/picture/forest.jpg');
+  background-color: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+/* .header_font{
+  font-family: 'Roboto Slab', serif;
+} */
